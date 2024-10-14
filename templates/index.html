@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать на сайт</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/blog">Блог</a></li>
+                <li><a href="/contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Главная</h2>
+         <div>
+            <img src="{{ url_for('static', filename='images/photo.jpeg') }}" alt="Фото" style="max-width: 10%; height: auto; margin-bottom: 5px;"><br>
+        </div>
+        <h2>Опыт работы и достижения</h2>
+        <p>Здесь кратко рассказывается о моем опыте работы, образовании и достижениях. Я имею более 20 лет опыта в области управления проектами и продажами.</p>
+        <p>Текущее время: {{ current_time }}</p>
+    </section>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <p>&copy; 2024 Мой сайт</p>
+    </footer>
+</body>
+</html>
